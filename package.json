@@ -1,0 +1,53 @@
+{
+  "name": "pate-graphique",
+  "version": "1.0.0",
+  "description": "Navigateur Pâte Graphique - un navigateur Electron ultra personnalisable",
+  "main": "dist/main/main.js",
+  "author": "Pâte Graphique Team",
+  "license": "MIT",
+  "scripts": {
+    "dev": "run-p dev:*",
+    "dev:main": "tsc -p tsconfig.main.json --watch",
+    "dev:preload": "tsc -p tsconfig.preload.json --watch",
+    "dev:renderer": "vite",
+    "start": "wait-on dist/main/main.js dist/preload/index.js && electron .",
+    "build": "run-s build:main build:preload build:renderer",
+    "build:main": "tsc -p tsconfig.main.json",
+    "build:preload": "tsc -p tsconfig.preload.json",
+    "build:renderer": "vite build",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "dist": "npm run build && electron-builder --win --x64"
+  },
+  "dependencies": {
+    "@cliqz/adblocker-electron": "^1.27.1",
+    "axios": "^1.6.7",
+    "deepmerge": "^4.3.1",
+    "electron-log": "^5.1.2",
+    "electron-store": "^9.0.0",
+    "fs-extra": "^11.2.0",
+    "keytar": "^7.9.0",
+    "lodash": "^4.17.21",
+    "luxon": "^3.4.4",
+    "uuid": "^9.0.1",
+    "cross-fetch": "^3.1.8"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.202",
+    "@types/node": "^20.12.7",
+    "@types/react": "^18.2.47",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^8.2.2",
+    "electron": "^29.1.0",
+    "electron-builder": "^24.9.1",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.33.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.2",
+    "vite": "^5.1.4",
+    "wait-on": "^7.2.0"
+  }
+}

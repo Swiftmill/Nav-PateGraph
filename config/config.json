@@ -1,0 +1,53 @@
+{
+  "general": {
+    "home": "https://www.startpage.com",
+    "searchEngine": "https://duckduckgo.com/?q=%s",
+    "hardwareAcceleration": true,
+    "maxChromiumProcesses": 8,
+    "restoreLastSession": true,
+    "enableExtensions": true
+  },
+  "privacy": {
+    "adblock": true,
+    "trackerBlock": true,
+    "strictHttps": false
+  },
+  "vpn": {
+    "enabled": false,
+    "defaultServer": "paris",
+    "servers": [
+      { "id": "paris", "name": "Paris, France", "socks5": "socks5://fr1.pategraphique.net:1080" },
+      { "id": "montreal", "name": "Montréal, Canada", "socks5": "socks5://ca1.pategraphique.net:1080" },
+      { "id": "tokyo", "name": "Tokyo, Japon", "socks5": "socks5://jp1.pategraphique.net:1080" }
+    ]
+  },
+  "themes": {
+    "active": "pate-graphique",
+    "allowCustomCss": true,
+    "allowCustomJs": true
+  },
+  "sidebar": {
+    "enabled": true,
+    "items": [
+      { "id": "history", "label": "Historique", "icon": "history" },
+      { "id": "downloads", "label": "Téléchargements", "icon": "download" },
+      { "id": "notes", "label": "Notes", "icon": "note" },
+      { "id": "settings", "label": "Paramètres", "icon": "settings" }
+    ]
+  },
+  "limits": {
+    "ram": 4096,
+    "cpu": 60
+  },
+  "newTab": {
+    "widgets": [
+      "clock",
+      "rss",
+      "system-stats"
+    ],
+    "rssFeeds": [
+      "https://feeds.feedburner.com/TechCrunch/",
+      "https://www.france24.com/fr/rss"
+    ]
+  }
+}

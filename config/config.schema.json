@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Configuration Pâte Graphique",
+  "type": "object",
+  "properties": {
+    "general": {
+      "type": "object",
+      "properties": {
+        "home": { "type": "string" },
+        "searchEngine": { "type": "string" },
+        "hardwareAcceleration": { "type": "boolean" },
+        "maxChromiumProcesses": { "type": "integer", "minimum": 1 },
+        "restoreLastSession": { "type": "boolean" },
+        "enableExtensions": { "type": "boolean" }
+      },
+      "required": ["home", "searchEngine"]
+    },
+    "privacy": {
+      "type": "object",
+      "properties": {
+        "adblock": { "type": "boolean" },
+        "trackerBlock": { "type": "boolean" },
+        "strictHttps": { "type": "boolean" }
+      }
+    }
+  }
+}
