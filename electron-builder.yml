@@ -1,0 +1,36 @@
+appId: com.pategraphique.browser
+productName: "Pâte Graphique"
+files:
+  - dist/main/**/*
+  - dist/preload/**/*
+  - dist/renderer/**/*
+  - package.json
+extraResources:
+  - from: config
+    to: config
+  - from: themes
+    to: themes
+  - from: mods
+    to: mods
+  - from: user-scripts
+    to: user-scripts
+  - from: data
+    to: data
+asarUnpack:
+  - node_modules/@cliqz/adblocker-electron/**/*
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: assets/icons/pate-graphique.ico
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+mac:
+  category: public.app-category.productivity
+linux:
+  target:
+    - AppImage
+  category: Network
